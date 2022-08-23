@@ -1,0 +1,1944 @@
+
+<!-- saved from url=(0128)https://exceptmusic-pacificarmor.codio.io/__guides__.html?id=c32dc126-58f6-6ca8-fb22-ad1ae34d2dbf&origin=https%3A%2F%2Fcodio.com -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Guide Player Iframe</title>
+    
+    <link type="text/css" rel="stylesheet" href="./main.d6788c2c874a2516.css">
+
+    <link href="./css2" rel="stylesheet">
+
+    <script type="text/javascript" src="./20918a8cd1bd457b9285.index.js"></script>
+    <script type="text/x-mathjax-config;executed=true">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$']],
+          displayMath: [['$$', '$$']],
+          processEscapes: true,
+          skipTags: ["script","noscript","style","textarea","pre","code","button"]
+        },
+        showMathMenu: false
+      })
+    </script>
+    <script type="text/javascript" src="./MathJax.js"></script>
+    <script type="text/javascript" src="./underscore-min.js"></script>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./lis.js"></script>
+    <script type="text/javascript" src="./jquery.sound.js"></script>
+    <script type="text/javascript" src="./jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./prettify.css">
+    <script type="text/javascript" src="./skulpt.js"></script>
+    <script type="text/javascript" src="./skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="./parsons.js"></script>
+
+    <!--<base target="_blank">--><base href="." target="_blank">
+  <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+  <body><div id="MathJax_Message" style="display: none;"></div>
+    <div id="react_container"><div class="guides"><div style="width: 0px; height: 0px; overflow: hidden; position: absolute; left: -10000px; top: -10000px;"><div class="codio-button-result-out-pass"></div><div class="codio-button-result-out-fail"></div><div class="codio-button-result-out-invalid"></div><div class="codio-button-result-out-progress"></div></div><style>@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,700,700i&subset=latin-ext,vietnamese');
+
+.body {
+  height: 100%;
+  padding-bottom: 1px;
+}
+
+.codio-assessment-name {
+  font-size: 150%;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  overflow: hidden;
+  max-height: 1.5em;
+  white-space: nowrap;
+}
+
+.codio-assessment-guidance-container {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  background-color: #e4efe4;
+  border: 1px #d6ded6 solid;
+  border-radius: 3px;
+}
+
+.codio-assessment-guidance-title {
+  margin: 0;
+}
+
+.codio-assessment-guidance-text {
+  font-size: 90%;
+}
+
+.codio-button-result.hide {
+  display: none;
+}
+
+.codio-button-result {
+  font-size: 100%;
+}
+
+.codio-assessment-last-run {
+  font-size: 70%;
+}
+
+.codio-assessment-last-run span {
+  color: #888;
+}
+
+.codio-button-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.codio-button.codio-button-type-assessment {
+  text-shadow: none;
+  border-radius: 2px;
+  text-transform: none;
+}
+
+.codio-button.codio-button-type-assessment-reset,
+.codio-button.codio-button-type-assessment-modify {
+  margin-left: 10px;
+  text-transform: none;
+}
+
+.codio-button.codio-button-type-assessment-validate {
+  margin-right: 10px;
+  text-transform: none;
+}
+
+.codio-math-progress {
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.codio-assessment-instructions-fieldset {
+  min-width: 0;
+  border: 0;
+}
+
+.codio-assessment-instructions-legend {
+  max-width: 100%;
+  float: left;
+}
+
+/* Radio buttons*/
+
+.codio-button-type-assessment-multiple-radio {
+  padding-top: 0px;
+  margin: 1em 0;
+  clear: both;
+}
+.codio-button-type-assessment-multiple-radio:first-of-type {
+  margin-top: 1em;
+}
+
+.codio-button-type-assessment-multiple-radio:last-of-type {
+  margin-bottom: 1em;
+}
+
+.codio-button-type-assessment-multiple-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.codio-button-type-assessment-multiple-radio input:focus+label {
+  outline: 2px auto Highlight;
+  position: relative;
+}
+
+.codio-button-type-assessment-multiple-radio label {
+  display: block;
+}
+
+.codio-button-type-assessment-multiple-radio label i {
+  background-color: rgba(204, 0, 102, 0);
+  border: 2px solid #aaadbd;
+  height: 14px;
+  width: 14px;
+  border-radius: 12px;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  transition: border 0.3s ease-in-out;
+  margin-top: 2px;
+}
+
+.codio-button-type-assessment-multiple-radio:hover label i {
+  border: 2px solid #797d92;
+  cursor: pointer;
+}
+
+.codio-button-type-assessment-multiple-radio label i::before {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  content: '';
+  display: inline-block;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-done:hover label i {
+  border: 2px solid #848db3;
+}
+
+.codio-button-type-assessment-multiple-radio input:checked + label i {
+  border: 2px solid #797d92;
+}
+
+.codio-button-type-assessment-multiple-radio input:checked + label i::before {
+  height: 0;
+  width: 0;
+  background-color: #797d92;
+  border: 5px solid #797d92;
+  border-radius: 50%;
+  content: '';
+}
+
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-ok:hover input:checked + label i,
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-ok input:checked + label i,
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-ok:hover label i,
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-ok label i {
+  border: 2px solid #71b380;
+}
+
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-ok input:checked + label i::before,
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-ok label i::before {
+  background-color: #71b380;
+  border-color: #71b380;
+}
+
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-wrong:hover input:checked + label i,
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-wrong input:checked + label i {
+  border: 2px solid #da8181;
+}
+
+.codio-button-type-assessment-multiple-radio.codio-assessment-multiple-wrong input:checked + label i::before {
+  background-color: #da8181;
+  border-color: #da8181;
+}
+
+.codio-challenge a.codio-assessment-disabled {
+  cursor: not-allowed;
+}
+
+/* Checkboxes*/
+
+.codio-button-type-assessment-multiple-checkbox {
+  padding-top: 0px;
+  margin: 1em 0;
+  clear: both;
+}
+
+.codio-button-type-assessment-multiple-checkbox:first-of-type {
+  margin-top: 1em;
+}
+
+.codio-button-type-assessment-multiple-checkbox:last-of-type {
+  margin-bottom: 1em;
+}
+
+.codio-button-type-assessment-multiple-checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.codio-button-type-assessment-multiple-checkbox input:focus+label {
+  outline: 2px auto Highlight;
+  position: relative;
+}
+
+.codio-button-type-assessment-multiple-checkbox label i {
+  background-color: #aaadbd;
+  border: 1px solid #aaadbd;
+  border-radius: 2px;
+  height: 12px;
+  width: 12px;
+  padding: 4px;
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+}
+
+.codio-button-type-assessment-multiple-checkbox label {
+  display: block;
+  position: relative;
+}
+
+.codio-button-type-assessment-multiple-checkbox label i {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.codio-button-type-assessment-multiple-checkbox:hover label i {
+  background-color: #797d92;
+}
+
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-done:hover label i {
+  background-color: #797d92;
+}
+
+.codio-button-type-assessment-multiple-checkbox input:checked + label i {
+  background-image: url("/assets/images/guides/checkmark.svg");
+  background-size: contain;
+  background-color: #797d92;
+}
+
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-ok:hover input:checked + label i,
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-ok input:checked + label i,
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-ok:hover label i,
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-ok label i {
+  background-color: #71b380;
+}
+
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-ok input:checked + label i::before,
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-ok label i::before {
+  background-color: #71b380;
+}
+
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-wrong:hover input:checked + label i,
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-wrong input:checked + label i {
+  background-color: #da8181;
+}
+
+.codio-button-type-assessment-multiple-checkbox.codio-assessment-multiple-wrong input:checked + label i::before {
+  background-color: #da8181;
+}
+
+.codio-button-type-assessment-multiple-answer {
+  margin: 0;
+  padding-left: 30px;
+  clear: both;
+}
+
+.codio-button-type-assessment-multiple-answer .p-tag {
+  margin: 0;
+}
+
+/* Fill in the blanks */
+
+.codio-fill-in-the-blanks {
+  margin-bottom: 2em;
+}
+
+.codio-fill-in-the-blanks .p-tag > div {
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.codio-fib-simple-wrapper {
+  display: inline-flex;
+}
+
+.codio-fib-simple-wrapper p {
+  margin: 2px 0;
+}
+
+/* select */
+
+.codio-fib-select {
+  display: inline-grid;
+  margin: 1px 5px;
+}
+
+.fib-react-select__control {
+  min-height: auto;
+  border: 1px solid #898989;
+}
+
+.fib-react-select__value-container {
+  padding: 0 8px;
+}
+
+.fib-react-select__input {
+  margin: 0 2px;
+}
+
+.fib-react-select__placeholder,
+.fib-react-select__single-value {
+  transform: none;
+  position: relative;
+  line-height: 1.2em;
+  max-width: calc(100% - 4px);
+  min-width: 50px;
+}
+
+.fib-react-select__single-value p {
+  margin: 2px 0;
+}
+
+.fib-react-select__input {
+  padding: 0;
+}
+
+.fib-react-select__indicator {
+  padding: 0;
+}
+
+.fib-react-select__indicator-separator {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.fib-react-select__menu {
+  white-space: nowrap;
+  width: auto;
+  font-size: 0.9em;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.fib-react-select__menu-list p {
+  margin: 0;
+}
+
+.fib-react-select__menu-list .fib-react-select__option {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-width: 90px;
+}
+
+/*   simple */
+
+.codio-fib-simple-input {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-size: 1em;
+  display: inline-block;
+  padding: 0 .2em;
+  background-color: #eceff6;
+  border-radius: 2px;
+  line-height: 1.3em;
+  border: 1px solid #898989;
+}
+
+.codio-fib-simple-input:focus {
+  outline: none;
+}
+
+.codio-fill-in-the-blanks .codio-md-line {
+  margin: 0;
+  line-height: 1.4em;
+}
+
+.codio-assessment-fib-ok,
+.codio-assessment-fib-wrong {
+  border-radius: 2px;
+}
+.codio-assessment-fib-ok {
+  background-color: #cfecd6;
+  border: 1px solid #cfecd6;
+}
+
+.codio-assessment-fib-wrong {
+  background-color: #ff9999;
+  border: 1px solid #ff9999;
+  text-decoration: line-through;
+}
+
+table th {
+  text-align: left;
+}
+
+/* Grade book */
+.codio-assessment-grade-book .codio-assessment-textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
+.codio-assessment-grade-book .codio-helpBlock {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* Tree text */
+.codio-assessment-free-text .codio-assessment-textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
+.codio-assessment-free-text .codio-assessment-content {
+  margin-bottom: 20px;
+}
+
+.codio-assessment-free-text .codio-helpBlock {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-right: 0;
+}
+
+
+/* Tree text auto */
+.codio-assessment-free-text-auto .codio-assessment-textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
+.codio-assessment-free-text-auto .codio-assessment-content {
+  margin-bottom: 20px;
+}
+
+.codio-assessment-free-text-auto .codio-helpBlock {
+  padding: 20px;
+  background-color: #e4edef;
+  margin-right: 0;
+  overflow: auto;
+}
+
+.codio-assessment-free-text-auto .codio-output {
+  max-height: 250px;
+}
+
+/* grade details - rubrics */
+.codio-rubricInfo {
+  line-height: 22px;
+}
+
+.codio-rubricInfo-posNumber,
+.codio-rubricInfo-negNumber {
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.codio-rubricInfo-posNumber {
+  color: #008000;
+}
+
+.codio-rubricInfo-negNumber {
+  color: #ff0000;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.codio-assessment-math-stack input {
+  font-size: 0.9em;
+}
+
+.codio-assessment-math-stack .MathJax {
+  font-size: 1.5em;
+}
+
+.stackpartmark {
+  font-weight: bold;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 15px;
+  padding: 0;
+  background-color: #d5dae6;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 4px 5px 0 0;
+}
+
+.toggle input[type=checkbox] {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.toggle .toggle-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #A8B2C4;
+  border-radius: inherit;
+}
+
+.toggle .toggle-label:before,
+.toggle .toggle-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  line-height: 1;
+  color: white;
+}
+
+.toggle input[type=checkbox]:checked ~ .toggle-label {
+  background: #4294f0;
+}
+
+.toggle input[type=checkbox]:checked ~ .toggle-label:before {
+  opacity: 0;
+}
+
+.toggle input[type=checkbox]:checked ~ .toggle-label:after {
+  opacity: 1;
+}
+
+.toggle input[type=checkbox]:disabled ~ .toggle-label {
+  background: #ffffff;
+}
+
+.toggle input[type=checkbox]:checked ~ .toggle-handle {
+  left: 16px;
+}
+
+.toggle .toggle-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 11px;
+  height: 11px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.codio-assessment-free-text-preview {
+  margin-bottom: 5px;
+}
+
+.codio-downArrow:before {
+  position: relative;
+  display: inline-block;
+  content: '';
+  border-left: 10px solid transparent;
+  border-top: 10px solid #555;
+  border-right: 10px solid transparent;
+  left: 5px;
+  top: 3px;
+}
+
+.codio-downArrow:after {
+  position: relative;
+  display: inline-block;
+  content: '';
+  border-left: 9px solid transparent;
+  border-top: 9px solid #fff;
+  border-right: 9px solid transparent;
+  left: -14px;
+  top: 0px;
+}
+
+.codio-upArrow:before {
+  position: relative;
+  display: inline-block;
+  content: '';
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #555;
+  border-right: 10px solid transparent;
+  left: 5px;
+  top: 3px;
+}
+
+.codio-upArrow:after {
+  position: relative;
+  display: inline-block;
+  content: '';
+  border-left: 9px solid transparent;
+  border-bottom: 9px solid #fff;
+  border-right: 9px solid transparent;
+  left: -14px;
+  top: 5px;
+}
+
+.codio-collapseArrow {
+  float: right;
+  margin-top: 10px;
+}
+
+.codio-assessment-parsons-puzzle .sortable-code {
+  float: none;
+}
+
+.codio-assessment-parsons-puzzle .sortable-code li {
+  white-space: pre-wrap;
+}
+
+.codio-assessment-parsons-puzzle .sortable-code ul,
+.codio-assessment-parsons-puzzle .testcase .output {
+  font-size: inherit;
+}
+
+.codio-assessment-parsons-puzzle .code-container {
+  position: relative;
+}
+
+.codio-assessment-parsons-puzzle .block-actions {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: #fff;
+  z-index: 1000;
+  cursor: default !important;
+}
+
+.codio-assessment-parsons-puzzle .model-canvas {
+  cursor: pointer;
+}
+
+.codio-assessment-random .tags-list {
+  margin: 10px 0;
+}
+
+.codio-button-expand {
+  background-image: url('/assets/images/guides/expand.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border: none;
+}
+
+/* Codio Blocks */
+
+.codio-warning::before,
+.codio-definition::before,
+.codio-important::before,
+.codio-topic::before,
+.codio-challenge::before,
+.codio-info::before,
+.codio-curiculum::before,
+.codio-guidance::before,
+.codio-meetups::before,
+.codio-headline::before,
+.codio-hackathon::before,
+.codio-create::before,
+.codio-calendar::before,
+.codio-growthhack::before,
+.codio-debugging::before,
+.codio-xdiscipline::before {
+  background-image: url("/assets/images/guides/blocks/quote.svg");
+  position: absolute;
+  content: ' ';
+  margin-left: -110px;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  width: 71px;
+  height: 71px;
+}
+
+.codio-important::before {
+  background-image: url("/assets/images/guides/blocks/important.svg");
+}
+
+.codio-warning,
+.codio-definition,
+.codio-important,
+.codio-topic,
+.codio-challenge,
+.codio-info,
+.codio-curiculum,
+.codio-guidance,
+.codio-meetups,
+.codio-headline,
+.codio-hackathon,
+.codio-create,
+.codio-calendar,
+.codio-growthhack,
+.codio-debugging,
+.codio-xdiscipline {
+  padding: 12px 40px 12px 65px;
+  margin: 1em 36px 2em 29px;
+  font-size: 0.9em;
+  color: #484040;
+  background-color: #f5f9f5;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px #DDD;
+  overflow-x: auto;
+}
+
+.codio-warning h1,
+.codio-definition h1,
+.codio-important h1,
+.codio-topic h1,
+.codio-challenge h1,
+.codio-info h1,
+.codio-curiculum h1,
+.codio-guidance h1,
+.codio-meetups h1,
+.codio-headline h1,
+.codio-hackathon h1,
+.codio-create h1,
+.codio-calendar h1,
+.codio-growthhack h1,
+.codio-debugging h1,
+.codio-xdiscipline h1,
+.codio-warning h2,
+.codio-definition h2,
+.codio-important h2,
+.codio-topic h2,
+.codio-challenge h2,
+.codio-info h2,
+.codio-curiculum h2,
+.codio-guidance h2,
+.codio-meetups h2,
+.codio-headline h2,
+.codio-hackathon h2,
+.codio-create h2,
+.codio-calendar h2,
+.codio-growthhack h2,
+.codio-debugging h2,
+.codio-xdiscipline h2,
+.codio-warning h3,
+.codio-definition h3,
+.codio-important h3,
+.codio-topic h3,
+.codio-challenge h3,
+.codio-info h3,
+.codio-curiculum h3,
+.codio-guidance h3,
+.codio-meetups h3,
+.codio-headline h3,
+.codio-hackathon h3,
+.codio-create h3,
+.codio-calendar h3,
+.codio-growthhack h3,
+.codio-debugging h3,
+.codio-xdiscipline h3 {
+  font-size: 120%;
+  font-style: normal;
+  margin-bottom: 0;
+  margin-top: 0;
+  border: none;
+  padding-bottom: 0;
+}
+
+.codio-warning > p:first-of-type,
+.codio-definition > p:first-of-type,
+.codio-important > p:first-of-type,
+.codio-topic > p:first-of-type,
+.codio-challenge > p:first-of-type,
+.codio-info > p:first-of-type,
+.codio-curiculum > p:first-of-type,
+.codio-guidance > p:first-of-type,
+.codio-meetups > p:first-of-type,
+.codio-headline > p:first-of-type,
+.codio-hackathon > p:first-of-type,
+.codio-create > p:first-of-type,
+.codio-calendar > p:first-of-type,
+.codio-growthhack > p:first-of-type,
+.codio-debugging > p:first-of-type,
+.codio-xdiscipline > p:first-of-type {
+  margin-top: 0;
+}
+
+.codio-info::before {
+  background-image: url("/assets/images/guides/blocks/info.svg");
+}
+
+.codio-definition::before {
+  background-image: url("/assets/images/guides/blocks/definition.svg");
+}
+
+.codio-warning::before {
+  background-image: url("/assets/images/guides/blocks/warning.svg");
+}
+.codio-curiculum::before,
+.codio-topic::before {
+  background-image: url("/assets/images/guides/blocks/topic.svg");
+}
+
+.codio-challenge::before {
+  background-image: url("/assets/images/guides/blocks/challenge.svg");
+  margin-left: -109px;
+}
+
+.codio-guidance::before {
+  background-image: url("/assets/images/guides/blocks/guidance.svg");
+}
+
+.codio-meetups::before {
+  background-image: url("/assets/images/guides/blocks/meetups.svg");
+}
+
+.codio-headline::before {
+  background-image: url("/assets/images/guides/blocks/headlines.svg");
+}
+
+.codio-hackathon::before {
+  background-image: url("/assets/images/guides/blocks/hackathon.svg");
+}
+
+.codio-create::before {
+  background-image: url("/assets/images/guides/blocks/creatorspaceLab.svg");
+}
+
+.codio-calendar::before {
+  background-image: url("/assets/images/guides/blocks/aDayInTheLifeOf.svg");
+}
+
+.codio-growthhack::before {
+  background-image: url("/assets/images/guides/blocks/growthHacks.svg");
+}
+
+.codio-debugging::before {
+  background-image: url("/assets/images/guides/blocks/debugging.svg");
+}
+
+.codio-xdiscipline::before {
+  background-image: url("/assets/images/guides/blocks/acrossTheDisciplines.svg");
+}
+
+.codio-feedback-comments {
+  max-height: 250px;
+  overflow: auto;
+  font-family: monospace;
+}
+
+.codio-feedback-comments div {
+  white-space: normal;
+}
+
+.codio-feedback-comments-border {
+  border-radius: 2px;
+  border: 1px solid #d3d5dc;
+  color: #33393d;
+  margin: 10px 0;
+  padding: 3px;
+}
+
+.codio-feedback-comments p,
+.codio-feedback-comments h1,
+.codio-feedback-comments h2,
+.codio-feedback-comments h3,
+.codio-feedback-comments h4,
+.codio-feedback-comments h5,
+.codio-feedback-comments div,
+.codio-feedback-comments ul {
+  margin: 0;
+  padding: 0 0 3px;
+}
+
+/* image-table */
+
+.codio-image-table {
+
+}
+
+.codio-image-table h3 {
+
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 100%;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  background-color: #222324;
+  margin: 33px 0 13px 0;
+}
+
+/* image */
+
+.codio-image {
+  max-width: 500px;
+  margin: 1em auto;
+}
+
+.codio-image img {
+  border: 1px solid #c7d5f6;
+  border-radius: 2px;
+}
+
+.codio-image p {
+  margin: 0;
+}
+
+.codio-image p + p {
+  font-size: 1em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* interactive table */
+.codio-interactive-table {
+}
+
+/* codio button */
+.codio-button {
+  text-shadow: none;
+  font-style: normal;
+  display: inline-block;
+  padding: 3px 17px 1px;
+  font-weight: normal;
+  font-size: 75%;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #386fd7;
+  border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Nunito Sans';
+  border: 1px solid #386fd7;
+}
+
+.codio-button:disabled {
+  cursor: not-allowed;
+}
+
+.codio-button:focus {
+  outline: thin dotted #333 !important;
+  outline: 5px auto -webkit-focus-ring-color !important;;
+  outline-offset: -2px;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  -moz-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.codio-button-diff {
+  float: right;
+  text-transform: none;
+}
+
+.codio-button-result {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  line-height: 25px;
+  position: relative;
+  padding: 1em 65px;
+  font-weight: normal;
+  margin: 1em 0;
+  min-height: 30px;
+}
+
+.codio-button-result:after {
+  position: absolute;
+  display: inline-block;
+  left: 21px;
+  bottom: 100%;
+  content: '';
+  border-left: 8px solid transparent;
+  border-bottom: 9px solid #fff;
+  border-right: 9px solid transparent;
+}
+
+
+.codio-button-result:before {
+  position: absolute;
+  display: inline-block;
+  left: 19px;
+  bottom: 100%;
+  content: '';
+  border-left: 10px solid transparent;
+  border-bottom: 11px solid #ddd;
+  border-right: 10px solid transparent;
+}
+
+.codio-button-result-out:before {
+  position: absolute;
+  display: inline-block;
+  left: 20px;
+  top: 26px;
+  content: '';
+}
+
+.codio-button-result-out-pass:before {
+  content: url("/assets/images/guides/checkmark_green.svg");
+  height: 26px;
+  width: 26px;
+}
+
+.codio-button-result-out-fail:before {
+  content: url("/assets/images/guides/remove_red.svg");
+  height: 26px;
+  width: 26px;
+}
+
+.codio-button-result-out-invalid:before {
+  content: url("/assets/images/guides/remove_red.svg");
+  height: 26px;
+  width: 26px;
+}
+
+.codio-button-result-out-progress:before {
+  content: url("/assets/images/guides/spinner-black.gif");
+  top: 23px;
+  left: 24px;
+}
+
+.codio-button-result .codio-button-result-out {
+  overflow: auto;
+  font-family: monospace;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.codio-button.codio-button-result-success {
+  color: #ffffff;
+  background: #18d8a7;
+  border: none;
+}
+
+.codio-button.codio-button-result-danger {
+  background-color: #E86A6B;
+  border: none;
+  margin-left: 5px;
+}
+
+.codio-button.codio-button-result-primary {
+  color: #ffffff;
+  background: #15a4fa;
+  border: none;
+  margin-left: 5px;
+}
+
+.codio-button.codio-assessment-disabled {
+  /* ios iframe hack, opacity rerenders whole iframe and scrolls up*/
+  background-color: #8bacea;
+  border-color: #8bacea;
+}
+
+.codio-button.codio-button-type-assessment-grade {
+  margin-left: 10px;
+}
+
+.codio-assessment-grade-book .codio-button.codio-button-type-assessment-grade {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.codio-button-result .codio-button-result-error-text {
+  color: #b94a48;
+}
+
+.codio-button-result .codio-button-result-success-text {
+  color: #468847;
+}
+
+.codio-assessment-compare .codio-button-result.fail .codio-button-result-out,
+.codio-challenge.codio-assessment-compare .codio-button-result.pass .codio-button-result-out
+{
+  font-style: normal;
+  font-size: 16px;
+}
+
+.codio-assessment-compare .codio-button-result-out > div {
+  font-weight: 600;
+}
+
+.codio-assessment-compare .codio-button-result-out > div > pre,
+.codio-assessment-compare .codio-button-result-out div.codio-output-diff > pre {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+}
+
+.codio-assessment-compare .codio-button-result-out .codio-output-text,
+.codio-assessment-compare .codio-button-result-out .codio-expected-output-text,
+.codio-assessment-compare .codio-button-result-out .codio-feedback-text {
+  max-height: 250px;
+  overflow: auto
+}
+
+.codio-assessment-compare .codio-button-result-out .codio-feedback-text {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.codio-assessment-compare .codio-button-result-out .codio-output-text,
+.codio-assessment-compare .codio-button-result-out .codio-output-diff-del
+{
+  background-color: #ffe6e6;
+}
+
+.codio-assessment-compare .codio-button-result-out .codio-expected-output-text,
+.codio-assessment-compare .codio-button-result-out .codio-output-diff-ins {
+  background-color: #e9fff2;
+}
+
+.codio-output-diff {
+  max-height: 500px;
+  overflow: auto
+}
+
+/* HelpBlock Component*/
+/* By default, the arrow is to the top left of the block. */
+.codio-helpBlock, .stackinputfeedback {
+  border-radius: 2px;
+  border: 1px solid #d3d5dc;
+  color: #33393d;
+  margin: 10px 36px 10px 0;
+  padding: 10px;
+  line-height: 16px;
+  position: relative;
+  max-width: 570px;
+}
+
+.codio-helpBlock--fullWidth {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.stackinputfeedback:empty {
+  display: none;
+}
+
+.stackinputfeedback,
+.codio-assessment-compare .codio-button-result-out .codio-feedback-text
+{
+  background-color: #fbfbfb;
+}
+
+/* Positions arrow to the bottom left. */
+.codio-helpBlock--topLeftArrow:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  border-bottom: 7px solid #eee;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  left: 10px;
+  top: -8px;
+}
+
+.codio-helpBlock--topLeftArrow:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  border-bottom: 6px solid #FFFFFF;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  left: 11px;
+  top: -6px;
+}
+
+/* Positions arrow to the bottom left. */
+.codio-helpBlock--bottomLeftArrow:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  border-top: 7px solid #eaecf2;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  left: 10px;
+  bottom: -8px;
+}
+
+.codio-helpBlock--bottomLeftArrow:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  border-top: 6px solid #FFFFFF;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  left: 11px;
+  bottom: -6px;
+}
+
+/* Positions arrow to the left. */
+.codio-helpBlock--leftArrow:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  border-bottom: 7px solid transparent;
+  border-right: 7px solid #eee;
+  border-top: 7px solid transparent;
+  left: -7px;
+  top: 10px;
+}
+
+.codio-helpBlock--leftArrow:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #fff;
+  border-top: 6px solid transparent;
+  left: -6px;
+  top: 11px;
+}
+
+.codio-challenge.codio-challenge-collapsed::before {
+  top: 12px;
+}
+
+.codio-button-type-gradeBook-pointsInput {
+  margin-right: 5px;
+}
+
+.codio-button-type-gradeBook-pointsOf {
+
+}
+
+.codio-button-type-gradeBook-pointsPicker {
+  margin-top: 5px;
+}
+
+.codio-button-type-gradeBook-commentInfo {
+  margin-top: 5px;
+}
+
+.codio-button-type-gradeBook-nameCollapse {
+  display: flex;
+  display: -moz-box;
+  display: -webkit-box;
+
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  min-width: 0;
+
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+
+  align-items: baseline;
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  -ms-flex-align: baseline;
+
+  height: 1.6em;
+}
+
+/* highilight css */
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #707070;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.javascript .hljs-title,
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  margin-top: 80px;
+  font-family: 'Nunito Sans';
+}
+
+footer button {
+  text-decoration: none;
+  background-image: none;
+  line-height: 1.5em;
+  border-radius: 2em;
+  padding: 0 8px;
+  background-color: transparent;
+  border: 1px solid #aaa;
+  text-transform: none;
+  min-width: 1em;
+  font-size: 0.9em;
+  color: #636C85;
+  margin-right: 20px;
+}
+
+footer button:hover {
+  border-color: #444;
+  color: #444;
+}
+
+footer button span::after {
+  background-image: url('/assets/images/guides/footer-next.png');
+  background-size: 1em 1em;
+  width: 1em;
+  height: 1em;
+  content: " ";
+  display: inline-block;
+  font-size: 1em;
+  vertical-align: middle;
+  margin-bottom: .25em;
+  margin-left: 0.1em;
+}
+
+footer button.plain span::after {
+  display: none;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0 60px 30px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.rendered-markdown {
+  font-family: 'Nunito Sans', sans-serif;
+  max-width: 660px;
+  margin: 0 auto;
+  font-weight: 150;
+  color: #212c3f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.7em;
+  font-weight: 900;
+  padding-bottom: 2px;
+}
+
+h2 {
+  border-bottom: 1px solid #212c3f;
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h2 {
+  border-bottom: 1px solid #212c3f;
+}
+
+.page-title {
+  margin-top: 10px;
+  line-height: 1.1em;
+  color: #8e8e8e;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.page-title.shrink {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: #FFF;
+  max-width: 90%;
+  width: 90%;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 500;
+  padding: 10px 5% 10px 5%;
+  margin-top: 0;
+  margin-left: -60px;
+  color: #767676;
+  box-shadow: 1px 0 20px #FFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+a {
+  color: #212c3f;
+  text-decoration: none;
+  text-shadow: 0.03em 0 white, -0.03em 0 white, 0 0.03em white, 0 -0.03em white, 0.06em 0 white, -0.06em 0 white, 0.09em 0 white, -0.09em 0 white, 0.12em 0 white, -0.12em 0 white, 0.15em 0 white, -0.15em 0 white;
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff), -webkit-linear-gradient(#ffffff, #ffffff), -webkit-linear-gradient(#212c3f, #212c3f);
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff), linear-gradient(#212c3f, #212c3f);
+  background-size: .05em 1px, .05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-position: 0% 90%, 100% 90%, 0% 90%;
+  cursor: pointer;
+}
+
+a::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe;
+}
+a::selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe;
+}
+
+a::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe;
+}
+
+a:before,
+a:after,
+a *,
+a *:before,
+a *:after {
+  text-shadow: none;
+}
+
+.docs-body a:visited {
+  color: #212c3f;
+}
+
+code {
+  font-family: monospace;
+}
+
+code {
+  font-size: 77%;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 .5em;
+  background-color: #f7f9fc;
+  border: 1px solid #c7d5f6;
+  border-radius: 2px;
+}
+
+.p-tag,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  margin: 0em 0 24px 0;
+}
+
+li {
+  margin-bottom: .5em;
+}
+
+li:last-of-type {
+  margin-bottom: 0;
+}
+
+h1 + .p-tag,
+h3 + .p-tag,
+h4 + .p-tag,
+h5 + .p-tag,
+h6 + .p-tag {
+  margin-top: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+pre {
+  margin: 1em 0;
+}
+
+pre code {
+  padding: 20px 28px;
+  display: block;
+  overflow: auto;
+}
+
+pre code b,
+pre code strong {
+  font-weight: 700;
+}
+
+.code-block {
+  position: relative;
+}
+
+.btn-clipboard {
+  background-image: url('/assets/images/guides/clipboard.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn-clipboard:hover {
+  opacity: 0.7;
+}
+
+ul {
+  padding-left: 1.3em;
+}
+
+ul ul {
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: inherit;
+}
+
+table th,
+table td {
+  padding: 14px;
+}
+
+table thead tr {
+  border-top: 1px solid #c7d5f6;
+}
+
+table tbody tr:first-child {
+  border-top: 1px solid #c7d5f6;
+}
+
+table tbody tr:nth-child(2n) {
+  background-color: #f7f9fc;
+}
+
+table tbody tr:last-child {
+  border-bottom: 1px solid #c7d5f6;
+}
+
+abbr {
+  border-bottom: 1px dashed #c7d5f6;
+  cursor: help;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #c7d5f6;
+  height: 1px;
+  padding: 0;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+blockquote {
+  padding-left: 20px;
+  border-left: 2px solid #212c3f;
+  font-style: italic;
+}
+
+mark {
+  background-color: #ffff9d;
+  padding: .05em .2em;
+  border-radius: 2px;
+}
+
+.codio-button-type-assessment,
+.codio-assessment-last-run {
+  font-family: 'Nunito Sans', sans-serif;
+}
+</style><style>body { font-size: 18px;}</style><div aria-live="polite" aria-atomic="true" style="border: 0px; clip: rect(1px, 1px, 1px, 1px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Current layout: 2 Panels without tree<span>Panel 0: opened file module1/assessment/views.py</span></div><div class="rendered-markdown" tabindex="0" role="region" aria-labelledby="page-title" style="outline: none;"><h1 class="page-title" style="opacity: 0;">Introduction to REST APIs: Question 4</h1><h1 id="page-title" class="page-title shrink">Introduction to REST APIs: Question 4</h1><div><h1 class="codio-md-line" data-line="0">Question 4</h1>
+<div class="codio-md-line p-tag" data-line="2">You can now implement <code>Fruit</code> creation by completing the <code>handle_list_post</code> function. The <code>body</code> argument it receives will be a string containing a JSON encoded dictionary, in the same format as <code>fruit_to_dict</code> returns (but without a <code>pk</code>). Make sure you return an HTTP response with the correct status and <code>Location</code> header.</div>
+<div class="codio-md-line p-tag" data-line="4"><div style="display: inline;"><div style="display: inline;"></div><div><button class="codio-button codio-button-type-normal" tabindex="0" aria-disabled="false">try it</button><div><div class="codio-button-result fail"><pre class="codio-button-result-out codio-button-result-out-fail" aria-live="polite">Traceback (most recent call last):
+  File "manage.py", line 22, in &lt;module&gt;
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/home/codio/.local/lib/python3.6/site-packages/django/core/management/__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/core/management/commands/test.py", line 23, in run_from_argv
+    super().run_from_argv(argv)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/core/management/base.py", line 354, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/core/management/base.py", line 398, in execute
+    output = self.handle(*args, **options)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/core/management/commands/test.py", line 55, in handle
+    failures = test_runner.run_tests(test_labels)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/test/runner.py", line 722, in run_tests
+    suite = self.build_suite(test_labels, extra_tests)
+  File "/home/codio/.local/lib/python3.6/site-packages/django/test/runner.py", line 579, in build_suite
+    tests = self.test_loader.loadTestsFromName(label)
+  File "/usr/lib/python3.6/unittest/loader.py", line 153, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/codio/workspace/module1/assessment/tests_4.py", line 6, in &lt;module&gt;
+    from assessment.views import handle_list_post
+  File "/home/codio/workspace/module1/assessment/views.py", line 41
+    def handle_detail_get(pk):
+      ^
+IndentationError: expected an indented block</pre></div></div></div><div style="display: inline;">
+</div></div></div>
+<div class="codio-md-line p-tag" data-line="6"><div style="display: inline;"><div style="display: inline;"></div><div class="codio-challenge codio-assessment-test"><div><div class="codio-assessment-instructions"><div><p>Submit your code for evaluation.</p>
+</div></div></div><div class="codio-assessment-guidance-container"><div class="codio-assessment-guidance-text"><h2 class="codio-md-line" data-line="0">Import Statements</h2>
+<p>Here are the import statements needed for the function:</p>
+<div class="code-block"><span class="btn-clipboard" title="Copy to clipboard" data-clipboard-target="#code-1463"></span><pre><code id="code-1463" class="language-python"><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">from</span> http <span class="hljs-keyword">import</span> HTTPStatus
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponseNotAllowed, JsonResponse, HttpResponse
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> reverse
+</code></pre></div>
+<h2 class="codio-md-line" data-line="10">handle_list_post</h2>
+<p>Here is one possible solution:</p>
+<div class="code-block"><span class="btn-clipboard" title="Copy to clipboard" data-clipboard-target="#code-1464"></span><pre><code id="code-1464" class="language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_list_post</span><span class="hljs-params">(body)</span>:</span>
+    <span class="hljs-comment"># Question 4: Complete this function body</span>
+    data = json.loads(body)
+    f = Fruit.objects.create(**data)
+    <span class="hljs-keyword">return</span> HttpResponse(
+        status=HTTPStatus.CREATED,
+        headers={<span class="hljs-string">"Location"</span>: reverse(<span class="hljs-string">"api_fruit_detail"</span>, args=(f.pk,))},
+    )
+</code></pre></div>
+<ul><li>Convert the string <code>body</code> to JSON</li>
+<li>Use this information to create a <code>Fruit</code> object</li>
+<li>Use <code>HttpResponse</code> to create a response with the 201 status code</li>
+<li>Include a Location header in the HTTP response</li>
+</ul>
+</div></div><div><button class="codio-button codio-button-type-assessment codio-button-disabled" tabindex="0" disabled="" aria-disabled="true">Check It!</button></div><div><div class="codio-button-result fail"><button class="codio-button-expand" title="Expand output" aria-label="Expand output "></button><div class="codio-assessment-last-run">LAST RUN <span>on 3/28/2022, 5:46:09 PM</span></div><pre tabindex="0" aria-label="Scrollable feedback " class="codio-button-result-out codio-button-result-out-fail codio-feedback-comments">Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: test_create (assessment.tests_4.Question4TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/codio/workspace/module1/assessment/tests_4.py", line 13, in test_create
+    resp = handle_list_post(body)
+  File "/home/codio/workspace/module1/assessment/views.py", line 47, in handle_list_post
+    if request.method == "POST":
+NameError: name 'request' is not defined
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...</pre></div></div></div><div style="display: inline;">
+</div></div></div>
+</div><footer><button class="codio-button-type-next" tabindex="0" aria-disabled="false"><span>Next</span></button></footer></div></div></div>
+  
+</body></html>
