@@ -1,0 +1,61 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div class="body" style="border:none;background-color:white;">
+{% if message %}
+<div class="alert alert-danger" role="alert" style=" text-align:center; position:absloute;top:20px;right:320px;">{{ message }}</div>
+{% else%}
+<img width="70px;" style="position:absloute;left:330px; top:10px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADz0lEQVRoge2XTWgdVRiGn+/MpGnv3LRoqC4UhCz8I8RFRClSXdgqWkuV4CRpi1gqglZTuhFXkiDdCVIKBfEHo1Bzr0JRtGAqWhTBQhsaFX9ADbZisbXaJnPb5t6Z+VyotU0yc89MYlGYZzcz73fO+84ZzjcHCgoKCgoK/sfIJZ2tOnmdq+ZxYLXCNUCowvdG9b3QNbvo8Y7NLFm0O+iqry9/njRk0wDOSO2e6JvS+wxKnNv4oBr3hmBIkacBN8FKgLIt6vNe4u0Tbc65xXch8gSxfBn1eU/mC1A9Xna09JPAcNhb3prXvzMy9QIij1rKDwFdQAtwLJKoE3/Zb0likzqxercDyxQGnJHaLqrqWLv+e4xqsD6DeYBu/jR/0gj30lB13wjuTBKnBlCJO85fiD7maG0P1dOXW1tRFWJ91lr/DyHI/ljZ4bjud8bheJIwNQA66/laR51xtxqstnHRUjlzMyIdzZWzcEF7gFsQ2VT3y18kCVMDCGZijttXqzLqVKb28Nbk9Wn1Mdpp53dOfhXiVZHvvZMmSg0QLT6zHySY+6nc70TmK6cSvOtUamvZq60zFSralsXxDAbC3qWfNhMlbGl/sW75lFSCVxQGEhQCrAFd40zVJqnU9in6mREdC018VCJJ3D2aojptI2veyF5Tz22tjSlcm9tMDkS5O+wrjzbTpW+jI8EGZ1GtR2LpUxhfOHvNMYZZXXkuUj8hFW0XZEcsisDZhbFmhdbPeT/YCNNXQOTjCy6XzMtSBgS+5iGp2WhTAzT88mGEAwtjyx5FP7HVpjcywCBbgMa8HGXGpO79FymbCRq+dwjVDVy6ECcjKX1gK24aACDqa3vTqNyGcDC/LztEeRFf6rZ6qwAAsXAVyCDKq4BVk8nB2VBlZ5aC9E58MatQ3fJvnuEEdtLv/ZylxnoFIomHgF8yu7LnSNiY3p61yDoAftsJE5t1wO9ZJ7EgFuERNrZPZi20DwA0+ksHIie6Ffgw60RpqMhQ6Jf35anN/UW3VGvdkXKfiK5ESTzyWTAc+d4mRDRPcaYVuJDGg6UxgaMo3XnHAIYj8TbnNQ95VmCvtjpBrV9hmyhdOedVRZ6J/dL2+ZiHlAAtI8FNGHFVY0+FK1SlQ+AOYCUwn5PWhKCbw962j+YxxnkS+0CjtfGjW295SpGtKKUF2P5PK/JcPF163vZP04bmvnYHVxqHjcDDApkP6QrjqL4ct4av88Blp/KYTCPbi61O3ehgVhDrCgydxLockXZgKXAKZRLDBKrfouZgZMwo/pIjC226oKCgoKCg4L/CH/2pQ2x506tNAAAAAElFTkSuQmCC"/>
+
+
+{% endif %}
+
+<div>
+<h2 style=" text-align:center; position:fixed;top:80px;left:550px;"><strong>Login into Network</strong></h2>
+</div>
+
+
+<div class="center_register">
+<form action="{% url 'login' %}" method="post">
+{% csrf_token %}
+
+<div class="form-group text-left login-form-group">
+    <label for="register-username" class="text-muted">Username</label>
+    <input class="form-control login-input" required type="text" name="username" id="register-username">
+</div>
+
+<div class="form-group text-left login-form-group" >
+    <label for="register-password" class="text-muted">Password</label>
+    <input class="form-control login-input" required type="password" name="password" id="register-password">
+</div>
+
+<input style="margin-left:0px;border-radius:800px; width:  100%; height: 45px;background-color:rgba(29,161,242,1.00);font-size:16px;" class="btn btn-primary"  type="submit" value="Log in">
+</form>
+<div style="margin-left:180px;" class="mt-4 login-bot-text">
+Don't have account <a style="color: rgba(29,161,242,1.00);" href="{% url 'register' %}">Register Here</a>
+</div>
+</div>
+</div>
+
+   
+
+{% endblock %}
+
+
+
+{% comment %} {% if message %}
+<div>{{ message }}</div>
+{% endif %}
+
+<form action="{% url 'login' %}" method="post">
+{% csrf_token %}
+<div class="form-group">
+    <input autofocus class="form-control" type="text" name="username" placeholder="Username">
+</div>
+<div class="form-group">
+    <input class="form-control" type="password" name="password" placeholder="Password">
+</div>
+<input class="btn btn-primary" type="submit" value="Login">
+</form>
+
+Don't have an account? <a href="{% url 'register' %}">Register here.</a> {% endcomment %}

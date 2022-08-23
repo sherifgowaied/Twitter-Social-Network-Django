@@ -1,0 +1,196 @@
+{% extends 'network/layout.html'%}
+
+{% load static %}
+<script src={% static 'javascript/index.js'%}></script>
+
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+{% block body %}
+
+
+
+
+<div style="background-color:white;">
+
+
+<div class="all_posts1" style="height:70px;">
+    <h5 style="margin-left:20px;;margin-top:5px;display:block;"><strong>{{user_profile.username}}</strong></h5>
+    <h6 style="color:grey;margin-left:20px;;display:block;"> {{count_posts}} Tweet </h6>
+</div>
+<div style="height: 200px; background-color: rgb(204, 214, 221);"></div>
+<img src="{{user_profile.image.url}}"  class="image_profile">
+
+<div class="white_big_detals" >
+
+
+
+    <div class="profile_details">
+        {# Follow buttons #}
+        {% if user.is_authenticated and user != user_profile %}
+        <div style="float: right; z-index: 20;margin-top:20px;">
+            <form action="{% url 'follow' user_profile.id  %}" method="POST">
+                {% csrf_token %}
+                {% if  following_profile %}
+                    <input type="submit" value="Following" name="unfollow_btn" class="btn following-btn"
+                           id="unfollowBtn" style="width: 96px">
+                {% else %}
+                    <input type="submit" value="Follow" name="follow_btn" class="btn follow-btn">
+                {% endif %}
+            </form>
+        </div>
+        <button class="message_button" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg></button>
+         <!--  message modal -->
+        <div class="msj-modal"> 
+            <div class="msj-content">
+            <h2 class="baslik"></a>Send message to {{ user_profile.username }}</h2> <div class="f-mclose">+</div>
+            <hr style="color:black">
+            <form action="{% url 'sendit' user_profile.id %}" method="POST">
+            <textarea rows=6 cols=50 required class="msjbox" name="content"></textarea>
+            <input type="submit" value="Send message" id="msj-send">
+            </form>
+            </div>
+        </div>
+    {% endif %}
+       <div class="profile_words">
+   <div style="font-size: 1.2rem;position:absloute; background-color:transparent; font-weight: bolder; height: 1.5rem; margin-top:20px">{{user_profile.first_name}} {{user_profile.last_name}}</div>
+               <div class="text-muted" style="font-size: 15px">@ {{user_profile.username}}</div>
+   
+               <div class="text-muted" style="font-size: 15px; margin: 7px 0px; "><i class="far fa-calendar-alt" style="margin-right: 0px"></i>Joined {{user_profile.date_joined}}</div>
+   
+               <div style=" margin: 7px 0px; ">
+               <span style="margin-right: 1.5rem; font-size: 15px"><strong> <button id="fsBtn" class="btn btn-primary" style="border-radius:15px;"> {{ user_profile.followers.count }} Following </button>  <button id="fBtn" class="btn btn-primary" style="border-radius:15px;">{{ user_profile.following.count }}  Followers </button> </h3> </span>
+               
+               </div>
+       </div>
+       <!--  following modal -->
+<div class="fs-modal">
+    <div class="fscontent">
+      <h2 class="baslik"> &#xf060; </a>Following</h2> <div class="fsclose">+</div>
+      <hr style="color:black">
+      {% for user in followers %}
+     <img src="{{user.following.image.url}}" class="rounded-circle"> <a href="{% url 'profile' user.user.id %}" class=" baslik posta"> {{ user.following.username}}</a>
+     <p class="username"> @{{user.following.email }} </p>
+     <hr style="color:black">
+   {% endfor %} 
+    </div>
+</div>
+
+
+
+<!-- followers modal -->
+<div class="fg-modal">
+    <div class="fcontent">
+      <h2 class="baslik"><i class="fas fa-arrow-left"></i></a>Followed by</h2> <div class="fclose">+</div>
+      <hr style="color:black">
+      {% for user in following %}
+     <img src="{{user.user.image.url}}" class="rounded-circle"> <a href="{% url 'profile' user.user.id %}" class=" baslik posta"> {{ user.user.username }}</a>
+     <p class="username"> @{{user.user.email }} </p>
+     <hr style="color:black">
+   {% endfor %} 
+    </div>
+  </div>
+  <!-- Followers modal ended -->
+
+  </div>
+       
+   </div> 
+
+
+
+    
+
+</div>
+    
+
+{% for post in profile_posts  reversed %}
+<div class="card" style="width: 40rem; height: auto; margin-left:35px;">
+    <div class="card-body" style="height:auto;">
+        
+        <div class="circle_img">
+      <img src="{{post.owner.image.url}}" alt="profile_picture"  class="card-img" style="flex-shrink: 0;min-width: 100%;min-height: 100%">
+        </div>
+        
+        <a href="{% url 'profile' post.owner.id %}"><h5  style="position:relative;bottom:60px;left:75px;font-weight:500px;"><strong> {{post.owner.username}}</strong> </h5></a>
+        <span style="color:grey;font-size:14px;position:relative;bottom:90px;left:220px;font-weight:500px;">@{{post.owner.email}}</span>
+         <br>
+        <span class="date">Create at {{post.time}}</span>
+
+        {% if request.user == post.owner %}
+        
+        <button style="float: right; font-size: small;position:relative; bottom:100px;" class="btn btn-secondary btn-sm" data-postid="{{ post.id }}"
+                class="btn edit-btn edit">Edit
+        </button>
+        <button style="float:right;  font-size: small;position:relative; bottom:100px;right:10px;" 
+             data-postid="{{ post.id }}" class="delete btn btn-secondary ">Delete
+            </button>
+            <!-- Delete Post Modal-->
+            <div class="delete-modal" id="delete{{post.id}}">
+                <div class="delcontent">
+         
+                <h3>Do you want to delete this post?</h3>
+                <form action="{% url 'delete' post.id %}" method="POST" style="display: inline;">
+                    <button id="del"class="btn btn-danger" type="submit">Delete</button>   
+                </form>
+                <button id="cancel{{post.id}}" class="btn btn-light" type="button">Cancel</button>
+                </div>
+            </div>
+        <!-- Delete Modal Ended-->
+        {% endif%}
+        <div id="content{{ post.id }}" class="comment_content">{{post.content}}</div>
+        
+        {% if post.post_image%}
+            <div class="image_post_share">
+                
+                <img style="overflow:hidden;max-height:400px;max-width:28rem;display:flex; justify-content:center;display: block;height:100%;width:auto;
+                margin-left: auto;
+                margin-right: auto;"  src="{{post.post_image.url}}">
+            </div>
+            {% else%}
+
+            {% endif%}
+
+        <div class="like_dislike" style="margin:10px;">
+            <div><img style="margin-left:10px;display:inline-block;width:20px;height:20px;margin-bottom:5px;" src="{% static 'images/fb_like.png' %}"/>
+                <span id="likes{{ post.id }}" style="position:relative;margin-top:10px;dfont-size: 1.2rem; margin-left: .5rem; color: #65676B;">{{post.likes.all.count}}</span></div>
+        </div> 
+
+        <div style="text-align: center;position:relative;bottom:20px;display:block;">
+            {% if user.is_authenticated %}
+                    {% if user in post.likes.all %}
+                    <button data-postid="{{ post.id }}" class="btn post-btn like" style="width: 32.65%; display: inline-block">
+
+                        <div style="color: rgb(32, 120, 244);">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height:20px;width:23px;" viewBox="0 0 512 512"><path d="M466.27 286.69C475.04 271.84 480 256 480 236.85c0-44.015-37.218-85.58-85.82-85.58H357.7c4.92-12.81 8.85-28.13 8.85-46.54C366.55 31.936 328.86 0 271.28 0c-61.607 0-58.093 94.933-71.76 108.6-22.747 22.747-49.615 66.447-68.76 83.4H32c-17.673 0-32 14.327-32 32v240c0 17.673 14.327 32 32 32h64c14.893 0 27.408-10.174 30.978-23.95 44.509 1.001 75.06 39.94 177.802 39.94 7.22 0 15.22.01 22.22.01 77.117 0 111.986-39.423 112.94-95.33 13.319-18.425 20.299-43.122 17.34-66.99 9.854-18.452 13.664-40.343 8.99-62.99zm-61.75 53.83c12.56 21.13 1.26 49.41-13.94 57.57 7.7 48.78-17.608 65.9-53.12 65.9h-37.82c-71.639 0-118.029-37.82-171.64-37.82V240h10.92c28.36 0 67.98-70.89 94.54-97.46 28.36-28.36 18.91-75.63 37.82-94.54 47.27 0 47.27 32.98 47.27 56.73 0 39.17-28.36 56.72-28.36 94.54h103.99c21.11 0 37.73 18.91 37.82 37.82.09 18.9-12.82 37.81-22.27 37.81 13.489 14.555 16.371 45.236-5.21 65.62zM88 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z"/></svg>
+
+                            Unlike
+                        </div>
+                    {% else %}
+                    <button data-postid="{{ post.id }}" class="btn post-btn like" style="width: 32.65%; display: inline-block">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" style="height:20px;width:23px;" viewBox="0 0 512 512"><path d="M466.27 286.69C475.04 271.84 480 256 480 236.85c0-44.015-37.218-85.58-85.82-85.58H357.7c4.92-12.81 8.85-28.13 8.85-46.54C366.55 31.936 328.86 0 271.28 0c-61.607 0-58.093 94.933-71.76 108.6-22.747 22.747-49.615 66.447-68.76 83.4H32c-17.673 0-32 14.327-32 32v240c0 17.673 14.327 32 32 32h64c14.893 0 27.408-10.174 30.978-23.95 44.509 1.001 75.06 39.94 177.802 39.94 7.22 0 15.22.01 22.22.01 77.117 0 111.986-39.423 112.94-95.33 13.319-18.425 20.299-43.122 17.34-66.99 9.854-18.452 13.664-40.343 8.99-62.99zm-61.75 53.83c12.56 21.13 1.26 49.41-13.94 57.57 7.7 48.78-17.608 65.9-53.12 65.9h-37.82c-71.639 0-118.029-37.82-171.64-37.82V240h10.92c28.36 0 67.98-70.89 94.54-97.46 28.36-28.36 18.91-75.63 37.82-94.54 47.27 0 47.27 32.98 47.27 56.73 0 39.17-28.36 56.72-28.36 94.54h103.99c21.11 0 37.73 18.91 37.82 37.82.09 18.9-12.82 37.81-22.27 37.81 13.489 14.555 16.371 45.236-5.21 65.62zM88 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z"/></svg> 
+                    Like
+                    {% endif %}
+                </button>
+                <button class="btn post-btn" style="width: 32.65%; display: inline-block"><img style="height:20px;width:23px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABjklEQVRoge2ZvUoDQRRGj4ug+AQaCytb0cZ3MD+PYKO9pVtYiEFfw1J8BBUVsQpoZWmnYCMIujFoFInFzGKy7ro/xp0r3APDkHtnNudjwhYTUBQlL3XgBHgGesJG27rV0kJsC5DNOppJIep2QRdYByppqR1QAXyMYw+oxi06tU2/PK/C+BjX47hm2zanyjQqyCTGNYhrhr+9/8KAr+dQZKhoEGloEGloEGloEGloEGloEGloEGloEGloEGloEGloEGn0B2nbWeJVaZRpOz+Fhf4gF3ZeLk2nOKHjZVyzxtclto/Mk4leYi8lLWySfp1/kLDXA84y7B/W2EpLXcXccgc/PGQ8Zl+jBPnAuiWeRFZu7QNnIvURoGV7jd9+SRlcY2TnIvVVW2+VblQAD+hghPtfBPOY/xtfgQUHXrlZxIS4i9TubX3NhVRePOAII7wDTAAbmFPoAZvu1LIzBuxihN+BPeDRfu4AK+7U8nHI99fgB7APzDr0GmA0w5o34AV4AK6Ac0yImz/0UhRlyHwCP9PfH6+MorwAAAAASUVORK5CYII="/>Comment</button>
+                <button class="btn post-btn" style="width: 32.65%; display: inline-block"><img style="height:20px;width:23px;margin-bottom:3px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABUUlEQVRIie3UMUtbURjG8V9Miou0OLhULFjErVMXETtXXexQyccowaXg7FpKwS4OboIOllIXdXHTxcExECxNFKTt5geIwznCTXpv7k2Nkz5wlsN7/s/7vOfcy6NyVB4Ao4lz1AfASlUbLdTu0+A5TrGBJ/dhACP4gQM8SxYsChHbPdbbWPsSH7GHBq7xN8GqYB1nmLjdbGE2p8spfMNvfMF7TGM0o74Wua+TEbO0jCusYDinNqlP+Jln8A6/8KoPMAUTjHfBy5gRkmziRBjZn8SZCr5K3EEpGpRSDHZwjO/4gGoEHglPsiGM4DKef4rtyKsKD0BWgqnY2Wdh/muYzEjaxovY9XpM8U9Bt1bj/i7GMsDJ88kveauIwSH207pJURNLvXhpBi39v5y+DOr+/09byOAu6uAN4QJzA4K/EcbboQXhonr97IquJuYH1OxD0Q20R2gVq2W+oAAAAABJRU5ErkJggg=="/>Share</button>
+            {% else %}
+                <a class="btn post-btn like" style="width: 32.65%;display: inline-block " href="{% url 'login' %}">   Like</a>
+                <a class="btn post-btn" style="width: 32.65%; display: inline-block" href="{% url 'login' %}"><i class="mr-2 far fa-comment-alt"></i>Comment</a>
+                <a class="btn post-btn" style="width: 32.65%; display: inline-block" href="{% url 'login' %}"><i class="mr-2 far fa-share-square"></i>Share</a>
+            {% endif %}
+
+        </div>
+    </div>
+  </div>
+
+{% endfor%}
+
+  
+
+
+
+
+
+
+
+
+{% endblock%}

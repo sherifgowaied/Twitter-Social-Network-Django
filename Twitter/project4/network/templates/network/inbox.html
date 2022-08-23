@@ -1,0 +1,121 @@
+
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'images/t.png' %}">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'javascript/inbox.js' %}"></script>
+
+    </head>
+    <body>
+      
+        <div class="d-flex flex-column flex-shrink-0 p-3 stickIt" style="display:block;width: 280px;height:100%;position:fixed;border:2px solid lightgrey;top: 0;bottom:0;overflow-y: auto;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img width="50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADz0lEQVRoge2XTWgdVRiGn+/MpGnv3LRoqC4UhCz8I8RFRClSXdgqWkuV4CRpi1gqglZTuhFXkiDdCVIKBfEHo1Bzr0JRtGAqWhTBQhsaFX9ADbZisbXaJnPb5t6Z+VyotU0yc89MYlGYZzcz73fO+84ZzjcHCgoKCgoK/sfIJZ2tOnmdq+ZxYLXCNUCowvdG9b3QNbvo8Y7NLFm0O+iqry9/njRk0wDOSO2e6JvS+wxKnNv4oBr3hmBIkacBN8FKgLIt6vNe4u0Tbc65xXch8gSxfBn1eU/mC1A9Xna09JPAcNhb3prXvzMy9QIij1rKDwFdQAtwLJKoE3/Zb0likzqxercDyxQGnJHaLqrqWLv+e4xqsD6DeYBu/jR/0gj30lB13wjuTBKnBlCJO85fiD7maG0P1dOXW1tRFWJ91lr/DyHI/ljZ4bjud8bheJIwNQA66/laR51xtxqstnHRUjlzMyIdzZWzcEF7gFsQ2VT3y18kCVMDCGZijttXqzLqVKb28Nbk9Wn1Mdpp53dOfhXiVZHvvZMmSg0QLT6zHySY+6nc70TmK6cSvOtUamvZq60zFSralsXxDAbC3qWfNhMlbGl/sW75lFSCVxQGEhQCrAFd40zVJqnU9in6mREdC018VCJJ3D2aojptI2veyF5Tz22tjSlcm9tMDkS5O+wrjzbTpW+jI8EGZ1GtR2LpUxhfOHvNMYZZXXkuUj8hFW0XZEcsisDZhbFmhdbPeT/YCNNXQOTjCy6XzMtSBgS+5iGp2WhTAzT88mGEAwtjyx5FP7HVpjcywCBbgMa8HGXGpO79FymbCRq+dwjVDVy6ECcjKX1gK24aACDqa3vTqNyGcDC/LztEeRFf6rZ6qwAAsXAVyCDKq4BVk8nB2VBlZ5aC9E58MatQ3fJvnuEEdtLv/ZylxnoFIomHgF8yu7LnSNiY3p61yDoAftsJE5t1wO9ZJ7EgFuERNrZPZi20DwA0+ksHIie6Ffgw60RpqMhQ6Jf35anN/UW3VGvdkXKfiK5ESTzyWTAc+d4mRDRPcaYVuJDGg6UxgaMo3XnHAIYj8TbnNQ95VmCvtjpBrV9hmyhdOedVRZ6J/dL2+ZiHlAAtI8FNGHFVY0+FK1SlQ+AOYCUwn5PWhKCbw962j+YxxnkS+0CjtfGjW295SpGtKKUF2P5PK/JcPF163vZP04bmvnYHVxqHjcDDApkP6QrjqL4ct4av88Blp/KYTCPbi61O3ehgVhDrCgydxLockXZgKXAKZRLDBKrfouZgZMwo/pIjC226oKCgoKCg4L/CH/2pQ2x506tNAAAAAElFTkSuQmCC"/>
+
+
+              <span class="fs-4"></span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+
+            
+              <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link link-dark" aria-current="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="padding-bottom:3px;"  width="33" height="35" fill="currentColor" color="black" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                      </svg><span style="color:white;">......</span>
+                      <span class="side-bar-titles">Posts</span>
+                </a>
+              </li>
+            
+              {% if user.is_authenticated %}
+              
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="35" color="black"  fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                      </svg>
+                      <span style="color:white;">......</span>
+                      <span class="side-bar-titles">Notification</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="black" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                      </svg>
+                      <span style="color:white;">......</span>
+                      <span class="side-bar-titles">Messages</span>
+                </a>
+              </li>
+              
+             
+              <li>
+                <a href="{% url 'profile' request.user.id %}" class="nav-link link-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg"width="30" height="30" color="black"fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                      </svg>
+                      <span style="color:white;">......</span>
+                      <span class="side-bar-titles">profile</span>
+                </a>
+              </li>
+              <br><br>
+              <li>
+                <a class="nav-link btn register-btn"  style="width: 87%; font-size: 16px; height: 50px; line-height: 35px" href="{% url 'logout' %}">
+                  <button type="button" style="background-color:rgba(29,161,242,1.00);border-radius:999px;width:200px;margin-left:1px;" class="btn btn-primary">Log Out</button>
+              </a>
+              </li>
+            </ul>
+            <hr>
+            <a href="{% url 'profile' request.user.id %}" style="margin-bottom:30px;font-size:14px;font-weight:900;color:black;" >{{request.user.email}}</a>
+            {% else%}
+
+            <li>
+              <a href="#" class="nav-link link-dark">
+                
+                  
+                    <img style="padding-bottom:3px;" width="30" height="38" color="black" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACzklEQVRoge2asWpUQRSGv2SDIAi6MVuoKBbayOYljPoGNmohRBCNEasUbvAFUhhFbEwgKYIgvkF8AUEs1nQRdiMkFilWK4kaYjFz1+ty750zM2f3Jpgfhiyzc875/5uZM3PmLhyiXAwp+xsGbgBncr7fBFaAPeW4ariFIVfUbmoGHNZ0BlwQjLmoGVBbwMDhI6AGLAMLQLUPXKrAIrBkY6miBjT5O48/kC3iGe41MJ9hV7U+kzFNFEX0ks8TUQO2BAI2gbGU3WgPeVUReeST1gaeAA1gQ0A+bdewtkV2USJc5AfVgkUs7wPySVvKI1mUhX77Ku4jfoUY9WaGslpexhPhOPC+RPIfMVkqClVM1hg0+RaCJy/ZiTuYHVKKNeARUAeO2Va3fWsefhZtbBXM4n5iO8B9ih9KBXhgx7r8NbTI13BPoR3gsofPCdwi2gjyf7qgySpGTgPXgVMOP1PASxn3LqaB544xX4E39m+C3KJIUoxktU+YqeGLCmZNhMTsFkXp+SopRrLwCtgNsNvFLzmk0S2KNAqadxG2q7HBNQR8ibDdiA2uISDmZiP6VkRDwNkI23OxwTUEXI2wvRYbPC3gc6CPO4Sn0cnAmOvJh5FUZ7I5jKf6juLeyOrAPeCFJ4kp4JJjzBbwFviR6msCr30CjSE7Skx4+LwC/HT4bPFv8R8F6WFumuLpVAEeCsiLD3Mj7iGALN0dwZxt7mJ22FXMfw7gPGbBTuKeNj4xRRilnIKmjcIN4AnKLylPhpI/8EX94j4gn7SFPJJFO7F0gQ8CQVwO/NWiREQLk68f289SUi1rM0txhuvrDbXW9XpesujrO4K8zDAvEPA0wy74BYd0cWxjzjpzmIvWGbIvnb4JfH3P6OtgjuVzmOPGjI3phM/q3gZue4z3RQdzNPfCf/WWUgJJUbTuHiKH9k8NhjC3e+M53yfFyJ5y3EOUhj/kYnwIPV9X4wAAAABJRU5ErkJggg=="/> 
+                    <span style="color:white;">......</span>
+                    <span class="side-bar-titles">Settings</span>
+                  
+              </a>
+            </li>
+
+
+            {% endif%}
+          </div>
+          
+          <div class="body" style="background-color:white;width:520px;height:auto;" >
+            <div class="all_posts"style="width:520px;">
+                <h4 style="margin-top:11px;margin-left:20px;display:block;"><strong>Messages</strong></h4>
+            </div>
+
+            <div id="body_inbox" style="position:relative;top:50px;">
+
+            </div>
+
+          </div>
+
+
+          <div class="right_div"style="width:600px;display:block;height:auto;">
+            
+             
+              
+                
+
+               
+
+              
+          
+          </div>
+
+
+          
