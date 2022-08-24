@@ -1,17 +1,15 @@
 # Twitter
-the app supports:</br>
-* Share posts &nbsp; *Like and dislike * Edit and delete your own posts * Profiles  * Follow and unfollow * Direct messages, seen , and mark as unseen * Pagination 
-* Login system and Register * comments(in backend only "data base") * admin pannel * Timestamps about shared posts and messages * Notifaction
+
 
 ### Homepage , Profiles , Pagination , Edit and delete your own posts ,Share posts
 https://user-images.githubusercontent.com/91483223/186310042-398a426b-e9f7-4526-8c29-ac0bd2103b97.mov
 
 
-### Profiles ,Follow and unfollow , Like and dislike , Follow and unfollow
+### Profiles ,Follow and unfollow , Like and dislike , Follow and unfollow 
 https://user-images.githubusercontent.com/91483223/186310752-d30322d1-42ed-4cf8-8897-d5df63c64b88.mov
 
 
-### Notification , Direct messages, seen , and mark as unseen
+### Notification about follow and likes , Direct messages, seen , and mark as unseen
 https://user-images.githubusercontent.com/91483223/186345881-6524d8d3-8bc7-46c6-aa37-0c55d8473e40.mov
 
 
@@ -28,6 +26,21 @@ https://user-images.githubusercontent.com/91483223/186345881-6524d8d3-8bc7-46c6-
 
 
 <img src="https://user-images.githubusercontent.com/91483223/186349075-866f57a8-214f-4e6c-933b-366f841d6ea6.png" width="1000px"/>
+
+## Functionality
+the app supports:</br>
+* Share posts 
+* Like and dislike 
+* Edit and delete your own posts 
+* Profiles  
+* Follow and unfollow 
+* Direct messages, seen , and mark as unseen 
+* Pagination 
+* Login system and Register 
+* comments(in backend only "data base") 
+* admin pannel 
+* Timestamps about shared posts and messages 
+* Notifaction
 
 ### Architecture
 **Frontend**
