@@ -4,12 +4,12 @@
 ### Homepage , Profiles , Pagination , Edit and delete your own posts ,Share posts
 https://user-images.githubusercontent.com/91483223/186310042-398a426b-e9f7-4526-8c29-ac0bd2103b97.mov
 
-
-### Profiles ,Follow and unfollow , Like and dislike , Follow and unfollow 
+ 
+### Profiles ,Follow and unfollow , Like and dislike , Follow and unfollow , messages
 https://user-images.githubusercontent.com/91483223/186310752-d30322d1-42ed-4cf8-8897-d5df63c64b88.mov
 
 
-### Notification about follow and likes , Direct messages, seen , and mark as unseen
+### Notifications about follows and likes , Direct messages, seen , and mark as unseen
 https://user-images.githubusercontent.com/91483223/186345881-6524d8d3-8bc7-46c6-aa37-0c55d8473e40.mov
 
 
@@ -40,7 +40,7 @@ the app supports:</br>
 * comments(in backend only "data base") 
 * admin pannel 
 * Timestamps about shared posts and messages 
-* Notifaction
+* Notifactions about follows and likes
 
 ### Architecture
 **Frontend**
