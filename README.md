@@ -1,6 +1,6 @@
 # Twitter
 the app supports:</br>
-* Share posts &nbsp; * Like and dislike * Edit and delete your own posts * Profiles  * Follow and unfollow * Direct messages, seen , and mark as unseen * Pagination 
+* Share posts &nbsp; *Like and dislike * Edit and delete your own posts * Profiles  * Follow and unfollow * Direct messages, seen , and mark as unseen * Pagination 
 * Login system and Register * comments(in backend only "data base") * admin pannel * Timestamps about shared posts and messages * Notifaction
 
 ### Homepage , Profiles , Pagination , Edit and delete your own posts ,Share posts
